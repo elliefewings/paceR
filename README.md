@@ -11,7 +11,7 @@ devtools::install_github("elliefewings/paceR")
 ```
 devtools::install("paceR")
 
-Load library
+#Load library
 library(paceR)
 ```
 
