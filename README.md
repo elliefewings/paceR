@@ -30,6 +30,13 @@ paceR.call(data=allelicdepths,
 	form='num')
 
 #> [1] NA NA  1  2  1
+
+paceR.call(data=allelicdepths,
+           minVafHet=0.4,
+           maxVafHet=0.6,
+           minDepth=10,
+           form='char')
+#> [1] NA    NA    "0/1" "1/1" "0/0"   
 ```
 
 ### Example2 - calling across multiple samples in a dataframe
