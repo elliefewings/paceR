@@ -49,13 +49,26 @@ df <- data.frame(CHROM=c(1, 2, 3, 4),
                  S2=c("0,1", "12,50", "2", "52,3"))
 
 #Apply paceR over columns of dataframe
-df[5:6]  <- df[5:6] %>% apply(2, paceR.call)
+t1 <- df
+t1[5:6]  <- t1[5:6] %>% apply(2, paceR.call)
 
-df
+t1
 
 #> CHROM  POS REF ALT S1 S2
 #> 1     1 1000   A   T  1 NA
 #> 2     2 2000   G   C NA  1
+#> 3     3 3000   C   G  0 NA
+#> 4     4 4000   T   A  1  0
+
+#Apply paceR with non-default parameters
+t2 <- df
+t2[5:6]  <- t2[5:6] %>% apply(2, paceR.call, minVafHet=0.4, maxVafHet=0.6)
+
+t2
+
+#> CHROM  POS REF ALT S1 S2
+#> 1     1 1000   A   T  2 NA
+#> 2     2 2000   G   C NA  2
 #> 3     3 3000   C   G  0 NA
 #> 4     4 4000   T   A  1  0
 
