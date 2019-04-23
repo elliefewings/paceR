@@ -1,6 +1,6 @@
 #' A function to convert allelic depths to genotypes
 #'
-#' This function allows you to convert a vector of allelic depths into variant called genotypes.
+#' Pileup Allele CallER: allows you to convert a vector of allelic depths into variant called genotypes
 #' @param data Object containing comma seperated allelic depths. Assumes ref,alt format.
 #' @param minVafHet The minimum variant allele frequency allowed for a variant to be called heterozygous.
 #' A variant with an allele frequency below this will be called homozygous reference.

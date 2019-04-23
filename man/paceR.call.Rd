@@ -25,14 +25,16 @@ item 'num' -- numeric format where homozygous reference is 0, heterozygous is 1,
 item 'char' -- character format where homozygous reference is 0/0, heterozygous is 0/1, and homozygous alternative is 1/1.}}
 }
 \description{
-This function allows you to convert a vector of allelic depths into variant called genotypes.
+Pileup Allele CallER: allows you to convert a vector of allelic depths into variant called genotypes
 }
 \examples{
 allelicdepths <- c("5,2", "0", "10,10", "2,28", "15,7")
+
 paceR.call(data=allelicdepths,
  minVafHet=0.1,
  maxVafHet=0.9,
  minDepth=10,
  form='num')
+ 
 [1] NA NA  1  2  1
 }
